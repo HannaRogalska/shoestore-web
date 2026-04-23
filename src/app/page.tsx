@@ -1,9 +1,12 @@
-
+import { Container } from "../components/Container";
+import Header from "../components/layout/Header";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50">
-      Hello
-    </div>
+    <>
+      <Container>
+        <Header />
+      </Container>
+    </>
   );
 }

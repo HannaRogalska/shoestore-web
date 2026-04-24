@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   --background: #ffffff;
   --foreground: #111111;
@@ -9,9 +8,7 @@
 @theme {
   --breakpoint-sm: 767px;
   --breakpoint-md: 768px;
-  --breakpoint-lg: 769px;
-  
-
+  --breakpoint-lg: 1280px;
 }
 @theme inline {
   --color-background: var(--background);
@@ -33,12 +30,11 @@ body {
 }
 
 @layer components {
-.swiper-pagination-bullet {
-  @apply w-[20px]! h-[6px]! rounded-none! bg-white! opacity-50! transition-all!;
-}
+  .swiper-pagination-bullet {
+    @apply h-[6px]! w-[20px]! rounded-none! bg-white! opacity-50! transition-all!;
+  }
 
-
-.swiper-pagination-bullet-active {
-  @apply w-[20px]! opacity-100!;
-}
+  .swiper-pagination-bullet-active {
+    @apply w-[20px]! opacity-100!;
+  }
 }

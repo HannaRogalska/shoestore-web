@@ -1,3 +1,4 @@
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
@@ -9,11 +10,12 @@ import "swiper/css/scrollbar";
 import { Slide } from "./types";
 import { HeroButton } from "./HeroButton";
 import { HeroContent } from "./HeroContent";
+import Image from "next/image";
 
 const slides: Slide[] = [
-  { id: 1, alt: "Banner", href: "/images/hero/hero-banner.jpg" },
-  { id: 2, alt: "Air max", href: "/images/hero/air_max.jpg" },
-  { id: 3, alt: "Just do it", href: "/images/hero/shoes.jpg" },
+  { id: 1, alt: "Banner", src: "/images/hero/hero-banner.jpg" },
+  { id: 2, alt: "Air max", src: "/images/hero/air_max.jpg" },
+  { id: 3, alt: "Just do it", src: "/images/hero/shoes.jpg" },
 ];
 
 export const Hero = () => {
@@ -24,21 +26,22 @@ export const Hero = () => {
       navigation
       pagination={{ clickable: true }}
       loop={true}
-      // autoplay={{
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.id}>
           {
-            <div className="relative">
-             <HeroContent/>
-
-              <img
-                src={slide.href}
+            <div className="relative h-[600px] w-full md:h-[750px]">
+              <HeroContent />
+              <Image
+                src={slide.src}
                 alt={slide.alt}
-                className="h-150 w-full object-cover object-[40%_80%] lg:h-187.5 lg:w-360 lg:object-[40%_80%]"
+                fill
+                className="object-cover object-[40%_80%]"
+                priority={slide.id === 1}
               />
               <HeroButton />
             </div>

@@ -2,11 +2,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
-// import "swiper/swiper.min.css";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import { Slide } from "./types";
 import { HeroButton } from "./HeroButton";
 import { HeroContent } from "./HeroContent";
@@ -23,7 +20,6 @@ export const Hero = () => {
     <Swiper
       modules={[Pagination, Autoplay]}
       slidesPerView={1}
-      navigation
       pagination={{ clickable: true }}
       loop={true}
       autoplay={{

@@ -1,5 +1,5 @@
 export interface FAQItemType {
-  id: string
+  id: string;
   question: string;
   answer: string;
 }

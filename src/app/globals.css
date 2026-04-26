@@ -11,6 +11,7 @@
   --color-brand-gray: #F5F5F5;
   --text-title-size: 30px;
   --text-small-size: 16px;
+  --color-text-gray: #737373
 }
 @theme inline {
   --color-background: var(--background);

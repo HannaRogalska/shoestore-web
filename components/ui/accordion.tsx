@@ -4,8 +4,7 @@ import * as React from "react";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 
 import { cn } from "@/lib/utils";
-import { CircleMinus } from "lucide-react";
-import { CirclePlus } from "lucide-react";
+import { CircleMinus, CirclePlus } from "lucide-react";
 
 function Accordion({
   className,

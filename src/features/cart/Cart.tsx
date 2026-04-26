@@ -14,28 +14,28 @@ const shoes: ShoesType[] = [
     src: "/images/cart/shoes-1.png",
     alt: "Red sneakers",
     title: "Nike Streakfly 2",
-    price: 300,
+    price: 300.00,
   },
   {
     id: "2",
     src: "/images/cart/shoes-2.png",
     alt: "White sneakers with a black Swoosh",
     title: "Nike Pegasus Premium",
-    price: 350,
+    price: 350.00,
   },
   {
     id: "3",
     src: "/images/cart/shoes-3.png",
     alt: "Black sneakers with a white Swoosh",
     title: "Nike Pegasus 41",
-    price: 280,
+    price: 280.00,
   },
   {
     id: "4",
     src: "/images/cart/shoes-4.png",
     alt: "White sneakers",
     title: "Nike Revolution 7",
-    price: 440,
+    price: 440.00,
   },
 ];
 export const Cart = () => {
@@ -56,7 +56,7 @@ export const Cart = () => {
                 className="mb-[16px] h-auto w-full rounded-xl"
               />
               <h3 className="text-[16px]">{el.title}</h3>
-              <div className="text-[#737373]">${el.price}</div>
+              <div className="text-[#737373]">${el.price.toFixed(2)}</div>
             </div>
           </CarouselItem>
         ))}

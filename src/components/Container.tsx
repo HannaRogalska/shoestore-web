@@ -8,6 +8,6 @@ export const Container = ({
   const maxWidth = size === "wide" ? "max-w-[1440px]" : "max-w-[1320px]";
 
   return (
-    <div className={`w-full mx-auto px-4 md:px-8 ${maxWidth}`}>{children}</div>
+    <div className={`mx-auto w-full px-4 md:px-8 ${maxWidth}`}>{children}</div>
   );
 };

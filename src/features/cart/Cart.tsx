@@ -14,28 +14,28 @@ const shoes: ShoesType[] = [
     src: "/images/cart/shoes-1.png",
     alt: "Red sneakers",
     title: "Nike Streakfly 2",
-    price: "300.00",
+    price: 300,
   },
   {
     id: "2",
     src: "/images/cart/shoes-2.png",
     alt: "White sneakers with a black Swoosh",
     title: "Nike Pegasus Premium",
-    price: "350.00",
+    price: 350,
   },
   {
     id: "3",
     src: "/images/cart/shoes-3.png",
     alt: "Black sneakers with a white Swoosh",
     title: "Nike Pegasus 41",
-    price: "280.00",
+    price: 280,
   },
   {
     id: "4",
     src: "/images/cart/shoes-4.png",
     alt: "White sneakers",
     title: "Nike Revolution 7",
-    price: "440.00",
+    price: 440,
   },
 ];
 export const Cart = () => {

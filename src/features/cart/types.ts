@@ -3,5 +3,5 @@ export interface ShoesType {
   src: string;
   alt: string;
   title: string;
-  price: string;
+  price: number;
 }

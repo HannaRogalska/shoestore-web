@@ -8,6 +8,9 @@
   --breakpoint-sm: 767px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1280px;
+  --color-brand-gray: #F5F5F5;
+  --text-title-size: 30px;
+  --text-small-size: 16px;
 }
 @theme inline {
   --color-background: var(--background);

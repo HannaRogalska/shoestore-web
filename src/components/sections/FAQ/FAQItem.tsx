@@ -35,20 +35,23 @@ const faqData: FAQItemType[] = [
 
 export const FAQItem = () => {
     return (
-      <div className="mx-auto w-full max-w-[872px]">
+      <Accordion
+        type="single"
+        collapsible
+        className="mx-auto w-full max-w-[872px]"
+      >
         {faqData.map((el) => (
-          <Accordion type="single" collapsible key={el.id}>
-            <AccordionItem
-              value="item-1"
-              className="bg-background mb-[8px] border border-[1px] rounded-[8px] border-[#EBEBEB] p-[24px] text-left"
-            >
-              <AccordionTrigger>{el.question}</AccordionTrigger>
-              <AccordionContent className="text-[#737373]">
-                {el.answer}
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <AccordionItem
+            value={`item-${el.id}`}
+            key={el.id}
+            className="bg-background mb-[8px] rounded-[8px] border border-[1px] border-[#EBEBEB] p-[24px] text-left last:mb-0"
+          >
+            <AccordionTrigger>{el.question}</AccordionTrigger>
+            <AccordionContent className="text-[#737373]">
+              {el.answer}
+            </AccordionContent>
+          </AccordionItem>
         ))}
-      </div>
+      </Accordion>
     );
 };

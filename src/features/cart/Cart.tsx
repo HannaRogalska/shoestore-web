@@ -56,7 +56,7 @@ export const Cart = () => {
                 className="mb-[16px] h-auto w-full rounded-xl"
               />
               <h3 className="text-[16px]">{el.title}</h3>
-              <div className="text-[#737373]">${el.price.toFixed(2)}</div>
+              <div className="text-[text-gray]">${el.price.toFixed(2)}</div>
             </div>
           </CarouselItem>
         ))}

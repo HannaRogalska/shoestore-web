@@ -10,5 +10,10 @@ export interface ProductType {
 
 export type ThumbnailsProps = {
   data: string[];
+  onSelect: (src: string) => void;
+};
+export type ButtonProps = {
+  selectedVariant: ProductType;
+  onSelectSize: (el: number) => void;
 };
 

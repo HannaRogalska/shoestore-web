@@ -2,23 +2,23 @@ import Image from "next/image";
 import { ThumbnailsProps } from "./types";
 
 
-export const Thumbnails = ({ data }: ThumbnailsProps) => {
+export const Thumbnails = ({ data, onSelect }: ThumbnailsProps) => {
   return (
-    <div className="md:mr-[24px] md:flex md:flex-col">
+    <div className="flex md:flex-col">
       {data.length > 0 &&
         data.map((el, index) => (
-          <div
+          <button
+            type="button"
+            onClick={() => onSelect(el)}
             key={`${el}-${index}`}
-            className="relative mb-[24px] h-[88px] w-[88px] last:mb-0"
+            className="md:w-[88px] mr-[16px] md:mb-[24px]"
           >
-            <Image
+            <img
               src={el}
-              fill
-              alt="Nike shoes"
-              className="object-cover md:mb-[24px] md:last:mb-0"
-              sizes="88px"
+              alt={`thumbnail ${index + 1}`}
+              className="object-cover"
             />
-          </div>
+          </button>
         ))}
     </div>
   );

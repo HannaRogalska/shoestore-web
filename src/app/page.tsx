@@ -3,6 +3,7 @@ import Header from "../components/layout/Header";
 import { FAQ } from "../components/sections/FAQ/FAQ";
 import { FeaturedCollection } from "../components/sections/FeaturedCollection/FeaturedCollection";
 import { Hero } from "../components/sections/Hero/Hero";
+import ProductSpotlight from "../components/sections/ProductSpotlight/ProductSpotlight";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
       </Container>
       <Container size="wide">
         <FAQ />
+      </Container>
+      <Container >
+        <ProductSpotlight/>
       </Container>
     </>
   );

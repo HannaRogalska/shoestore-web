@@ -11,7 +11,7 @@
   --color-brand-gray: #F5F5F5;
   --text-title-size: 30px;
   --text-small-size: 16px;
-  --color-text-gray: #737373
+  --color-text-gray: #737373;
 }
 @theme inline {
   --color-background: var(--background);
@@ -62,6 +62,9 @@
 
   .swiper-pagination-bullet-active {
     @apply w-[20px]! opacity-100!;
+  }
+  .btn-ui{
+    @apply rounded-[8px] border
   }
 }
 

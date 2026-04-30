@@ -47,7 +47,7 @@ export const FAQItem = () => {
             className="bg-background mb-[8px] rounded-[8px] border border-[#EBEBEB] p-[24px] text-left last:mb-0"
           >
             <AccordionTrigger>{el.question}</AccordionTrigger>
-            <AccordionContent className="text-[text-gray]">
+            <AccordionContent className="text-text-gray">
               {el.answer}
             </AccordionContent>
           </AccordionItem>

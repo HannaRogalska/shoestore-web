@@ -75,33 +75,34 @@ const ProductSpotlight = () => {
   };
 
   return (
-    <section className="flex flex-col gap-10 py-[60px] lg:flex-row lg:py-[80px]">
+    <section className="flex flex-col gap-10 py-[60px] lg:flex-row md:py-[80px]">
       <div className="flex max-w-full flex-col-reverse items-start gap-6 md:flex-row">
         <Thumbnails data={thumbnails} onSelect={onSelect} />
-        <div className="relative aspect-square w-full lg:h-[500px]">
+        <div className="relative aspect-square w-full md:h-[500px]">
           <Image
             src={selectedImage}
             alt={selectedVariant.title}
             fill
-            className="object-cover"
+            className="object-cover px-[40px]"
+            sizes="(max-width: 768px) 100vw, 500px"
           />
         </div>
       </div>
 
       <div className="w-full min-w-0">
-        <div className="mt-[24px] mb-[32px]">
-          <h2 className="text-title-size">{selectedVariant.title}</h2>
-          <p className="text-small-size text-(--color-text-gray)">
+        <div className="md:mt-[24px] md:mb-[32px]">
+          <h2 className="text-title-size mb-[12px]">{selectedVariant.title}</h2>
+          <p className="text-small-size mb-[24px] text-(--color-text-gray)">
             ${selectedVariant.price.toFixed(2)}
           </p>
         </div>
 
-        <div>
+        <div className="mb-[24px] flex flex-row  md:flex-shrink-0">
           {productData.map((el) => (
             <button
               onClick={() => handleShoes(el)}
               key={el.id}
-              className="relative mr-[8px] mb-[32px] h-[88px] w-[88px] last:mr-0"
+              className="relative mr-[8px] h-[88px] w-[88px] last:mr-0 md:mb-[32px]"
             >
               <Image
                 src={el.src}
@@ -116,7 +117,6 @@ const ProductSpotlight = () => {
 
         <div>
           <p className="mb-[12px] text-[14px]">Select Size: {selectedSize}</p>
-
           <ProductButton
             selectedVariant={selectedVariant}
             onSelectSize={onSelectSize}

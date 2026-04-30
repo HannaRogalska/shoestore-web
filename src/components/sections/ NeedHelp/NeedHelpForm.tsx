@@ -4,14 +4,14 @@ import React from "react";
 import { useState } from "react";
 export const NeedHelpForm = () => {
   const [result, setResult] = useState("");
-  
+
   const onSubmit = async (event: React.SyntheticEvent<HTMLFormElement>) => {
-      event.preventDefault();
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
-      if (!accessKey) {
-        console.error("Access Key is missing!");
-        return;
-      }
+    event.preventDefault();
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+    if (!accessKey) {
+      console.error("Access Key is missing!");
+      return;
+    }
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", accessKey as string);
 
@@ -21,12 +21,12 @@ export const NeedHelpForm = () => {
     });
 
     const data = await response.json();
-      if (data.success) {
-        setResult("Success!");
-        (event.target as HTMLFormElement).reset();
-      } else {
-        setResult("Error");
-      }
+    if (data.success) {
+      setResult("Success!");
+      (event.target as HTMLFormElement).reset();
+    } else {
+      setResult("Error");
+    }
   };
 
   return (
@@ -35,14 +35,15 @@ export const NeedHelpForm = () => {
       className="ite flex flex-col items-center gap-[24px]"
     >
       <div>
-        <div className="flex flex-row items-center gap-[24px]">
+        <div className="mb-[8px] flex flex-col items-center gap-[8px] md:flex-row md:gap-[24px]">
           <div className="flex flex-col gap-[8px]">
             <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
+              id="name"
               required
-              className="h-[56px] w-[424px] border bg-[#FFFFFF] p-[16px]"
+              className="btn-ui h-[56px] w-[343px] bg-[#FFFFFF] p-[16px] md:w-[424px]"
               placeholder="Enter name"
             />
           </div>
@@ -50,9 +51,10 @@ export const NeedHelpForm = () => {
             <label htmlFor="number">Enter Number</label>
             <input
               type="number"
+              id="number"
               name="number"
               required
-              className="h-[56px] w-[424px] border bg-[#FFFFFF] p-[16px]"
+              className="btn-ui h-[56px] w-[343px] bg-[#FFFFFF] p-[16px] md:w-[424px]"
               placeholder="Enter name"
             />
           </div>
@@ -62,16 +64,18 @@ export const NeedHelpForm = () => {
           <input
             type="email"
             name="email"
+            id="email"
             placeholder="Email"
             required
-            className="border bg-[#FFFFFF] p-[16px]"
+            className="btn-ui w-[343px] bg-[#FFFFFF] p-[16px] md:w-[424px]"
           />
         </div>
         <div className="flex flex-col gap-[8px]">
           <label htmlFor="message">Message</label>
           <textarea
             name="message"
-            className="p-[16px] resize-none border bg-[#FFFFFF] h-[152px]"
+            id="message"
+            className="btn-ui h-[152px] resize-none bg-[#FFFFFF] p-[16px]"
             placeholder="Enter Message"
             required
           ></textarea>
@@ -79,7 +83,7 @@ export const NeedHelpForm = () => {
       </div>
       <button
         type="submit"
-        className="h-[56px] w-[121px] border bg-[#111111] text-[#FFFFFF]"
+        className="btn-ui h-[56px] w-[121px] bg-[#111111] text-[#FFFFFF]"
       >
         Submit
       </button>

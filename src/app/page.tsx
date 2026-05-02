@@ -1,10 +1,11 @@
 import { Container } from "../components/Container";
-import Header from "../components/layout/Header";
+import Header from "../components/layout/Header/Header";
 import { NeedHelp } from "../components/sections/NeedHelp/NeedHelp";
 import { FAQ } from "../components/sections/FAQ/FAQ";
 import { FeaturedCollection } from "../components/sections/FeaturedCollection/FeaturedCollection";
 import { Hero } from "../components/sections/Hero/Hero";
 import ProductSpotlight from "../components/sections/ProductSpotlight/ProductSpotlight";
+import { Footer } from "../components/layout/Footer/Footer";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Container>
         <NeedHelp/>
       </Container>
+      <Container><Footer/></Container>
     </>
   );
 }

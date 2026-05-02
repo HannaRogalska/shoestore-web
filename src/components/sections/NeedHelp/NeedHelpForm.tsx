@@ -55,7 +55,7 @@ export const NeedHelpForm = () => {
           <div className="flex flex-col gap-[8px]">
             <label htmlFor="number">Enter Number</label>
             <input
-              type="number"
+              type="tel"
               id="number"
               name="number"
               required

@@ -58,6 +58,8 @@ export const NeedHelpForm = () => {
               type="tel"
               id="number"
               name="number"
+              inputMode="tel"
+              autoComplete="tel"
               required
               className="btn-ui h-[56px] w-[343px] bg-[#FFFFFF] p-[16px] md:w-[424px]"
               placeholder="Enter name"

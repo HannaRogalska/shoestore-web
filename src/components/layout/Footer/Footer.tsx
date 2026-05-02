@@ -56,7 +56,7 @@ const footerData: FooterDataType[] = [
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <section className="flex w-full flex-col px-[60px] pt-[60px]">
+    <footer className="flex w-full flex-col px-[60px] pt-[60px]">
       <div className="hidden gap-[24px] md:flex md:flex-row md:justify-between">
         {footerData.map((el) => (
           <div key={el.id}>
@@ -96,6 +96,6 @@ export const Footer = () => {
         <Link href="#">Terms of Use</Link>
         <Link href="#">Privacy & Cookie Policy</Link>
       </div>
-    </section>
+    </footer>
   );
 };

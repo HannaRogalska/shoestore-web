@@ -55,9 +55,11 @@ export const NeedHelpForm = () => {
           <div className="flex flex-col gap-[8px]">
             <label htmlFor="number">Enter Number</label>
             <input
-              type="number"
+              type="tel"
               id="number"
               name="number"
+              inputMode="tel"
+              autoComplete="tel"
               required
               className="btn-ui h-[56px] w-[343px] bg-[#FFFFFF] p-[16px] md:w-[424px]"
               placeholder="Enter name"

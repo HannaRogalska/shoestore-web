@@ -15,17 +15,22 @@ export const NeedHelpForm = () => {
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", accessKey as string);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
-    if (data.success) {
-      setResult("Success!");
-      (event.target as HTMLFormElement).reset();
-    } else {
-      setResult("Error");
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setResult("Success!");
+        (event.target as HTMLFormElement).reset();
+      } else {
+        setResult("Error");
+      }
+    } catch (error) {
+      console.log(`Server error: ${error}`);
+      setResult("Network error. Please try again.");
     }
   };
 
@@ -59,7 +64,7 @@ export const NeedHelpForm = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-[8px]">
+        <div className="mb-[8px] flex flex-col gap-[8px]">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -67,7 +72,7 @@ export const NeedHelpForm = () => {
             id="email"
             placeholder="Email"
             required
-            className="btn-ui w-[343px] bg-[#FFFFFF] p-[16px] md:w-[424px]"
+            className="btn-ui bg-[#FFFFFF] p-[16px]"
           />
         </div>
         <div className="flex flex-col gap-[8px]">

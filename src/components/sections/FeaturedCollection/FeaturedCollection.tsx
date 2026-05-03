@@ -1,4 +1,5 @@
-import { Cart } from "@/src/features/cart/Cart";
+import { Cart } from "./Cart";
+
 
 export const FeaturedCollection = () => {
   return (

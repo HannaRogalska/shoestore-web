@@ -4,18 +4,15 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { Slide } from "./types";
 import { HeroButton } from "./HeroButton";
 import { HeroContent } from "./HeroContent";
 import Image from "next/image";
-
-const slides: Slide[] = [
-  { id: 1, alt: "Banner", src: "/images/hero/hero-banner.jpg" },
-  { id: 2, alt: "Air max", src: "/images/hero/air_max.jpg" },
-  { id: 3, alt: "Just do it", src: "/images/hero/shoes.jpg" },
-];
+import { SLIDE_DATA } from "./data";
 
 export const Hero = () => {
+  if (!SLIDE_DATA || SLIDE_DATA.length === 0) {
+    return null;
+  }
   return (
     <Swiper
       modules={[Pagination, Autoplay]}
@@ -27,7 +24,7 @@ export const Hero = () => {
         disableOnInteraction: false,
       }}
     >
-      {slides.map((slide) => (
+      {SLIDE_DATA.map((slide) => (
         <SwiperSlide key={slide.id}>
           {
             <div className="relative h-[600px] w-full md:h-[750px]">

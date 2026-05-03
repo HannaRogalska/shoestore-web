@@ -1,4 +1,4 @@
-import { Cart } from "@/src/features/cart/Cart";
+import { Cart } from "@/src/components/sections/FeaturedCollection/Cart";
 
 export const FeaturedCollection = () => {
   return (

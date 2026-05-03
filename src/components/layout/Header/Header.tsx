@@ -1,31 +1,27 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { NAV_LINKS } from "./data";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinks = [
-    { name: "New & Featured", href: "#" },
-    { name: "Men", href: "#" },
-    { name: "Women", href: "#" },
-    { name: "Kids", href: "#" },
-  ];
+  
   return (
-    <div className="flex justify-between h-21 items-center relative">
-      <img src="./icon.png" className="hidden sm:block w-6 h-6" alt="Logo" />
-      <button className="sm:hidden z-50" onClick={() => setIsOpen(!isOpen)}>
+    <header className="relative flex h-[84px] items-center justify-between">
+      <img src="./icon.png" className="hidden h-6 w-6 sm:block" alt="Logo" />
+      <button className="z-50 sm:hidden" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? (
           <span className="text-2xl">✕</span>
         ) : (
           <img
             src="/images/header/menu-burger.svg"
-            className="w-6 h-6"
+            className="h-6 w-6"
             alt="Burger menu"
           />
         )}
       </button>
-      <div className="sm:flex justify-between gap-8 text-base font-normal hidden">
-        {navLinks.map((link) => (
+      <nav className="hidden justify-between gap-8 text-base font-normal sm:flex">
+        {NAV_LINKS.map((link) => (
           <Link
             key={link.name}
             href={link.href}
@@ -34,13 +30,13 @@ const Header = () => {
             {link.name}
           </Link>
         ))}
-      </div>
-      <Link href="#" className=" hover:text-gray-500">
-        <img src="/images/header/bin.png" className="w-6 h-6" />
+      </nav>
+      <Link href="#" className="hover:text-gray-500">
+        <img src="/images/header/bin.png" className="h-6 w-6" alt="Bin" />
       </Link>
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-xl z-40 flex flex-col items-center gap-6 py-8 md:hidden">
-          {navLinks.map((link) => (
+        <nav className="absolute top-full left-0 z-40 flex w-full flex-col items-center gap-6 bg-white py-8 shadow-xl md:hidden">
+          {NAV_LINKS.map((link) => (
             <Link
               key={link.name}
               href={link.href}
@@ -49,9 +45,9 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
-        </div>
+        </nav>
       )}
-    </div>
+    </header>
   );
 };
 

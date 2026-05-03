@@ -4,59 +4,14 @@ import Image from "next/image";
 import { ProductType } from "./types";
 import { Thumbnails } from "./Thumbnails";
 import { ProductButton } from "./ProductButton";
+import { PRODUCT_DATA } from "./data";
 
-const productData: ProductType[] = [
-  {
-    id: "1",
-    title: "Nike Air Max Plus",
-    color: "Pink",
-    price: 280,
-    src: "/images/productSpotlight/pink_air.png",
-    thumbnails: [
-      "/images/productSpotlight/pink_air.png",
-      "/images/productSpotlight/pink_air_detail_1.png",
-      "/images/productSpotlight/pink_air_detail_2.png",
-      "/images/productSpotlight/pink_air_detail_3.png",
-      "/images/productSpotlight/pink_air_detail_4.png",
-    ],
-    size: [38, 39, 40, 41, 42, 43],
-  },
-  {
-    id: "2",
-    title: "Nike Air Max Plus",
-    color: "Black",
-    price: 280,
-    src: "/images/productSpotlight/black_air.png",
-    thumbnails: [
-      "/images/productSpotlight/black_air.png",
-      "/images/productSpotlight/black_air.png",
-      "/images/productSpotlight/black_air.png",
-      "/images/productSpotlight/black_air.png",
-      "/images/productSpotlight/black_air.png",
-    ],
-    size: [38, 39, 40, 41, 42, 43],
-  },
-  {
-    id: "3",
-    title: "Nike Air Max Plus",
-    color: "White",
-    price: 280,
-    src: "/images/productSpotlight/white_air.png",
-    thumbnails: [
-      "/images/productSpotlight/white_air.png",
-      "/images/productSpotlight/white_air.png",
-      "/images/productSpotlight/white_air.png",
-      "/images/productSpotlight/white_air.png",
-      "/images/productSpotlight/white_air.png",
-    ],
-    size: [38, 39, 40, 41, 42, 43],
-  },
-];
+
 
 const ProductSpotlight = () => {
-  const [selectedVariant, setSelectedVariant] = useState(productData[0]);
-  const [selectedImage, setSelectedImage] = useState(productData[0].src);
-  const [selectedSize, setSelectedSize] = useState(productData[0].size[0]);
+  const [selectedVariant, setSelectedVariant] = useState(PRODUCT_DATA[0]);
+  const [selectedImage, setSelectedImage] = useState(PRODUCT_DATA[0].src);
+  const [selectedSize, setSelectedSize] = useState(PRODUCT_DATA[0].size[0]);
 
   const thumbnails = selectedVariant.thumbnails;
 
@@ -75,7 +30,7 @@ const ProductSpotlight = () => {
   };
 
   return (
-    <section className="flex flex-col gap-10 py-[60px] lg:flex-row md:py-[80px]">
+    <section className="flex flex-col gap-10 py-[60px] md:py-[80px] lg:flex-row">
       <div className="flex max-w-full flex-col-reverse items-start gap-6 md:flex-row">
         <Thumbnails data={thumbnails} onSelect={onSelect} />
         <div className="relative aspect-square w-full md:h-[500px]">
@@ -97,8 +52,8 @@ const ProductSpotlight = () => {
           </p>
         </div>
 
-        <div className="mb-[24px] flex flex-row  md:flex-shrink-0">
-          {productData.map((el) => (
+        <div className="mb-[24px] flex flex-row md:flex-shrink-0">
+          {PRODUCT_DATA.map((el) => (
             <button
               onClick={() => handleShoes(el)}
               key={el.id}

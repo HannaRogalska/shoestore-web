@@ -9,6 +9,9 @@ import {
 import { SHOES_DATA } from "./data";
 
 export const Cart = () => {
+  if (!SHOES_DATA || SHOES_DATA.length === 0) {
+    return null;
+  }
   return (
     <Carousel className="w-full" opts={{ loop: false, align: "start" }}>
       <CarouselContent className="-ml-1">

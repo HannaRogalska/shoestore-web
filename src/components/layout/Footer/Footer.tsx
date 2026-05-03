@@ -11,6 +11,9 @@ import { FOOTER_DATA } from "./data";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  if (!FOOTER_DATA || FOOTER_DATA.length === 0) {
+    return null;
+  }
   return (
     <footer className="flex w-full flex-col px-[60px] pt-[60px]">
       <div className="hidden gap-[24px] md:flex md:flex-row md:justify-between">

@@ -9,9 +9,10 @@ import { HeroContent } from "./HeroContent";
 import Image from "next/image";
 import { SLIDE_DATA } from "./data";
 
-
-
 export const Hero = () => {
+  if (!SLIDE_DATA || SLIDE_DATA.length === 0) {
+    return null;
+  }
   return (
     <Swiper
       modules={[Pagination, Autoplay]}

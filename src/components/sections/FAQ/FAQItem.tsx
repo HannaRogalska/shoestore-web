@@ -10,6 +10,9 @@ import { FAQ_DATA } from "./data";
 
 
 export const FAQItem = () => {
+  if (!FAQ_DATA || FAQ_DATA.length === 0) {
+    return null;
+  }
     return (
       <Accordion
         type="single"

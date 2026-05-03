@@ -5,7 +5,9 @@ import { NAV_LINKS } from "./data";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+  if (!NAV_LINKS || NAV_LINKS.length === 0) {
+    return null;
+  }
   return (
     <header className="relative flex h-[84px] items-center justify-between">
       <img src="./icon.png" className="hidden h-6 w-6 sm:block" alt="Logo" />

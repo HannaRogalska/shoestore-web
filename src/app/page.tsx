@@ -6,6 +6,7 @@ import { FeaturedCollection } from "../components/sections/FeaturedCollection/Fe
 import { Hero } from "../components/sections/Hero/Hero";
 import ProductSpotlight from "../components/sections/ProductSpotlight/ProductSpotlight";
 import { Footer } from "../components/layout/Footer/Footer";
+import { PopupBanner } from "../components/layout/PopupBanner/ PopupBanner";
 
 export default function Home() {
   return (
@@ -22,13 +23,12 @@ export default function Home() {
       <Container size="wide">
         <FAQ />
       </Container>
-      <Container >
-        <ProductSpotlight/>
-      </Container>
       <Container>
-        <NeedHelp/>
+        <ProductSpotlight />
+        <NeedHelp />
+        <Footer />
       </Container>
-      <Container><Footer/></Container>
+      <PopupBanner />
     </>
   );
 }

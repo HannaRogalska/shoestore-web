@@ -66,7 +66,7 @@ const ProductSpotlight = () => {
               <button
                 onClick={() => handleShoes(el)}
                 key={el.id}
-                className={`relative h-[88px] w-[88px] flex-shrink-0 overflow-hidden rounded-[8px] ${
+                className={`last:mr-0 relative mr-[16px] h-[88px] w-[88px] flex-shrink-0 overflow-hidden rounded-[8px] ${
                   isActive
                     ? "rounded-[8px] border border-[2px] border-[#111111]"
                     : ""

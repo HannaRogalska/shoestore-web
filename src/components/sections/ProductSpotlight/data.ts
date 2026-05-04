@@ -24,10 +24,6 @@ export const PRODUCT_DATA: ProductType[] = [
     src: "/images/productSpotlight/black_air.png",
     thumbnails: [
       "/images/productSpotlight/black_air.png",
-      "/images/productSpotlight/black_air.png",
-      "/images/productSpotlight/black_air.png",
-      "/images/productSpotlight/black_air.png",
-      "/images/productSpotlight/black_air.png",
     ],
     size: [38, 39, 40, 41, 42, 43],
   },
@@ -38,10 +34,6 @@ export const PRODUCT_DATA: ProductType[] = [
     price: 280,
     src: "/images/productSpotlight/white_air.png",
     thumbnails: [
-      "/images/productSpotlight/white_air.png",
-      "/images/productSpotlight/white_air.png",
-      "/images/productSpotlight/white_air.png",
-      "/images/productSpotlight/white_air.png",
       "/images/productSpotlight/white_air.png",
     ],
     size: [38, 39, 40, 41, 42, 43],

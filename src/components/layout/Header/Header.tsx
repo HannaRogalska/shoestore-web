@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NAV_LINKS } from "./data";
 
 const Header = () => {
@@ -8,6 +8,14 @@ const Header = () => {
   if (!NAV_LINKS || NAV_LINKS.length === 0) {
     return null;
   }
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [isOpen]);
   return (
     <header className="relative flex h-[84px] items-center justify-between">
       <img src="./icon.png" className="hidden h-6 w-6 sm:block" alt="Logo" />

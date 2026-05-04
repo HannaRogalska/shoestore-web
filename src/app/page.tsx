@@ -23,6 +23,7 @@ export default function Home() {
       <Container size="wide">
         <FAQ />
       </Container>
+      
       <Container>
         <ProductSpotlight />
         <NeedHelp />

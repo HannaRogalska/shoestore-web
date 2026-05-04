@@ -15,7 +15,7 @@ export const Footer = () => {
     return null;
   }
   return (
-    <footer className="flex w-full flex-col px-[60px] pt-[60px]">
+    <footer className="flex w-full flex-col px-[16px] pt-[60px] md:px-[60px]">
       <div className="hidden gap-[24px] md:flex md:flex-row md:justify-between">
         {FOOTER_DATA.map((el) => (
           <div key={el.id}>
@@ -34,8 +34,8 @@ export const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="mb-[48px] block md:hidden">
-        <Accordion type="single" collapsible>
+      <div className="mb-[48px] block w-full md:hidden">
+        <Accordion type="single" className="w-full" collapsible>
           {FOOTER_DATA.map((el) => (
             <AccordionItem value={el.id} key={el.id}>
               <AccordionTrigger variant="footer">{el.title}</AccordionTrigger>

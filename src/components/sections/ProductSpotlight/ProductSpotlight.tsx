@@ -35,7 +35,11 @@ const ProductSpotlight = () => {
   return (
     <section className="flex flex-col gap-10 py-[60px] md:py-[80px] lg:flex-row">
       <div className="flex max-w-full flex-col-reverse items-start gap-6 md:flex-row">
-        <Thumbnails data={thumbnails} onSelect={onSelect} />
+        <Thumbnails
+          data={thumbnails}
+          onSelect={onSelect}
+          selectedImage={selectedImage}
+        />
         <div className="relative aspect-square w-full md:h-[500px]">
           <Image
             src={selectedImage}
@@ -56,21 +60,29 @@ const ProductSpotlight = () => {
         </div>
 
         <div className="mb-[24px] flex flex-row md:flex-shrink-0">
-          {PRODUCT_DATA.map((el) => (
-            <button
-              onClick={() => handleShoes(el)}
-              key={el.id}
-              className="relative mr-[8px] h-[88px] w-[88px] last:mr-0 md:mb-[32px]"
-            >
-              <Image
-                src={el.src}
-                fill
-                sizes="88px"
-                alt={`Nike shoes ${el.title}`}
-                className="object-cover"
-              />
-            </button>
-          ))}
+          {PRODUCT_DATA.map((el) => {
+            const isActive = selectedVariant.id === el.id
+            return (
+              <button
+                onClick={() => handleShoes(el)}
+                key={el.id}
+                className={`relative h-[88px] w-[88px] flex-shrink-0 overflow-hidden rounded-[8px] ${
+                  isActive
+                    ? "rounded-[8px] border border-[2px] border-[#111111]"
+                    : ""
+                }`}
+              >
+                <Image
+                  src={el.src}
+                  fill
+                  sizes="88px"
+                  alt={`Nike shoes ${el.title}`}
+                  className="object-cover"
+                />
+              </button>
+            );}
+           
+          )}
         </div>
 
         <div>
@@ -78,6 +90,7 @@ const ProductSpotlight = () => {
           <ProductButton
             selectedVariant={selectedVariant}
             onSelectSize={onSelectSize}
+            selectedSize={selectedSize}
           />
         </div>
 

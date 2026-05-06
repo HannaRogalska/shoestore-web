@@ -13,7 +13,9 @@ export const Thumbnails = ({ data, onSelect, selectedImage }: ThumbnailsProps) =
             key={index}
             onClick={() => onSelect(el)}
             className={`relative h-[88px] w-[88px] flex-shrink-0 overflow-hidden rounded-[8px] ${
-              isActive ? "rounded-[8px] border border-[#111111] border-[2px]" : ""
+              isActive
+                ? "rounded-[8px] border border-[2px] border-[#111111]"
+                : ""
             }`}
             type="button"
           >

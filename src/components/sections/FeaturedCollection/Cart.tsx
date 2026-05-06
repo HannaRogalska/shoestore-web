@@ -14,7 +14,7 @@ export const Cart = () => {
   }
   return (
     <Carousel className="w-full" opts={{ loop: false, align: "start" }}>
-      <CarouselContent className="-ml-1">
+      <CarouselContent>
         {SHOES_DATA.map((el) => (
           <CarouselItem
             key={el.id}

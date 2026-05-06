@@ -37,7 +37,7 @@ export const NeedHelpForm = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className="flex w-full flex-col items-center gap-[24px]"
+      className="flex w-full flex-col items-center gap-[24px] md:w-[872px]"
     >
       <div className="w-full">
         <div className="mb-[8px] flex w-full flex-col items-center gap-[8px] md:flex-row md:gap-[24px]">

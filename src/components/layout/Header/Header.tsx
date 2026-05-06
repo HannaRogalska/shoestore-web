@@ -6,9 +6,7 @@ import { Container } from "../../Container";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  if (!NAV_LINKS || NAV_LINKS.length === 0) {
-    return null;
-  }
+ 
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("overflow-hidden");
@@ -17,6 +15,10 @@ const Header = () => {
     }
     return () => document.body.classList.remove("overflow-hidden");
   }, [isOpen]);
+  
+   if (!NAV_LINKS || NAV_LINKS.length === 0) {
+     return null;
+   }
   return (
     <header>
       <Container>

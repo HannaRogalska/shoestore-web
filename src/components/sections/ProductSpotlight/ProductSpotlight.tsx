@@ -10,9 +10,7 @@ import { Container } from "../../Container";
 
 
 const ProductSpotlight = () => {
-  if (!PRODUCT_DATA || PRODUCT_DATA.length === 0) {
-    return null;
-  }
+
   const [selectedVariant, setSelectedVariant] = useState(PRODUCT_DATA[0]);
   const [selectedImage, setSelectedImage] = useState(PRODUCT_DATA[0].src);
   const [selectedSize, setSelectedSize] = useState(PRODUCT_DATA[0].size[0]);
@@ -32,6 +30,9 @@ const ProductSpotlight = () => {
   const onSelectSize = (el: number) => {
     setSelectedSize(el);
   };
+   if (!PRODUCT_DATA || PRODUCT_DATA.length === 0) {
+     return null;
+   }
 
   return (
     <section>

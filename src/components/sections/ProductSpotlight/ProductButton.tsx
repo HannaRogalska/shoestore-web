@@ -17,7 +17,7 @@ export const ProductButton = ({
             key={index}
             className={`${isActive ? "rounded-[8px] border border-[#111111]" : ""} btn-ui h-[52px] w-full transition-colors hover:border-[#111111]`}
           >
-            UE {el}
+            EU {el}
           </button>
         );
       })}

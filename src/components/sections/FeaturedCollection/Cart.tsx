@@ -34,8 +34,8 @@ export const Cart = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-5 hidden translate-x-0 md:flex md:disabled:hidden" />
-      <CarouselNext className="right-5 hidden translate-x-0 md:flex md:disabled:hidden" />
+      <CarouselPrevious className="left-[-10] hidden translate-x-0 md:flex md:disabled:hidden" />
+      <CarouselNext className="right-[-10] hidden translate-x-0 md:flex md:disabled:hidden" />
     </Carousel>
   );
 };

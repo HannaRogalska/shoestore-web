@@ -5,6 +5,7 @@ import { ProductType } from "./types";
 import { Thumbnails } from "./Thumbnails";
 import { ProductButton } from "./ProductButton";
 import { PRODUCT_DATA } from "./data";
+import { Star } from "lucide-react";
 import { Container } from "../../Container";
 
 
@@ -49,9 +50,14 @@ const ProductSpotlight = () => {
                 src={selectedImage}
                 alt={selectedVariant.title}
                 fill
+                priority
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 500px"
               />
+              <div className="absolute top-[16px] left-[16px] z-10 flex flex-row items-center bg-[#FFFFFF] p-[8px]">
+                <Star className="mr-[4px] h-[10px] w-[10px] fill-[#111111]" />
+                <p className="text-[14px]/[20px] rounded-[4px]">Highly Rated</p>
+              </div>
             </div>
           </div>
 
@@ -109,7 +115,7 @@ const ProductSpotlight = () => {
                 Add To Bag
               </button>
             </div>
-            <p className="text-[14px] text-(--color-text-gray)">
+            <p className="text-[14px] text-(--color-text-gray) ">
               Let your attitude have the edge in your Nike Air Max Plus, a Tuned
               Air experience that offers premium stability and unbelievable
               cushioning.

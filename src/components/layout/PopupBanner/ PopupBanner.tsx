@@ -19,16 +19,16 @@ export const PopupBanner = () => {
           onClick={() => setIsOpen(false)}
         ></div>
         <div className="fixed top-1/2 left-1/2 z-50 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[8px] border bg-[#FFFFFF] md:h-[536px] md:w-[872px]">
-          <div className="relative w-[359px] px-[24px] py-[60px] md:w-[519px] md:p-[60px]">
-            <h2 className="mb-[16px] text-[30px]/[36px] font-bold uppercase md:text-[48px]/[48px]">
+          <div className="relative w-[359px] px-6 py-15 md:w-[519px] md:p-15">
+            <h2 className="mb-4 text-3xl font-bold uppercase md:text-5xl">
               Here’s $10 Off Your First Order!
             </h2>
-            <p className="mb-[48px] md:text-[16px]/[24px]">
+            <p className="mb-12 ">
               Join our newsletter and get a $10 discount code sent straight to
               your inbox. New customers only.
             </p>
             <div className="flex flex-col">
-              <label htmlFor="email" className="mb-[8px]">
+              <label htmlFor="email" className="mb-2">
                 Email
               </label>
               <input
@@ -47,7 +47,10 @@ export const PopupBanner = () => {
                 className="absolute top-[16px] right-[16px] md:hidden"
                 onClick={() => setIsOpen(false)}
               >
-                <X className="rounded-[50px] border bg-[#FFFFFF]" strokeWidth={0.5} />
+                <X
+                  className="rounded-[50px] border bg-[#FFFFFF]"
+                  strokeWidth={0.5}
+                />
               </button>
             </div>
           </div>

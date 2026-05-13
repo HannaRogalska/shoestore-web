@@ -14,16 +14,12 @@ export const FAQItem = () => {
     return null;
   }
     return (
-      <Accordion
-        type="single"
-        collapsible
-        className="mx-auto w-full max-w-[872px]"
-      >
+      <Accordion type="single" collapsible className="mx-auto w-full max-w-218">
         {FAQ_DATA.map((el) => (
           <AccordionItem
             value={`item-${el.id}`}
             key={el.id}
-            className="bg-background mb-[8px] rounded-[8px] border border-[#EBEBEB] p-[24px] text-left last:mb-0"
+            className="bg-background btn-ui border-stroke mb-2 p-6 text-left last:mb-0"
           >
             <AccordionTrigger>{el.question}</AccordionTrigger>
             <AccordionContent className="text-text-gray text-justify">

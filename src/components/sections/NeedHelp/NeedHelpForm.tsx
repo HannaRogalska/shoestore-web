@@ -37,22 +37,22 @@ export const NeedHelpForm = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className="flex w-full flex-col items-center gap-[24px] md:w-[872px]"
+      className="flex w-full flex-col items-center gap-6 md:w-218"
     >
       <div className="w-full">
-        <div className="mb-[8px] flex w-full flex-col items-center gap-[8px] md:flex-row md:gap-[24px]">
-          <div className="flex w-full flex-col gap-[8px]">
+        <div className="mb-2 flex w-full flex-col items-center gap-2 md:flex-row md:gap-6">
+          <div className="flex w-full flex-col gap-2">
             <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
               id="name"
               required
-              className="btn-ui h-[56px] bg-[#FFFFFF] p-[16px] "
+              className="btn-ui border-stroke h-14 bg-white p-4"
               placeholder="Enter name"
             />
           </div>
-          <div className="flex w-full flex-col gap-[8px]">
+          <div className="flex w-full flex-col gap-2">
             <label htmlFor="number">Enter Number</label>
             <input
               type="tel"
@@ -61,12 +61,12 @@ export const NeedHelpForm = () => {
               inputMode="tel"
               autoComplete="tel"
               required
-              className="btn-ui h-[56px] bg-[#FFFFFF] p-[16px] "
+              className="btn-ui border-stroke h-14 bg-white p-4"
               placeholder="Enter Number"
             />
           </div>
         </div>
-        <div className="mb-[8px] flex w-full flex-col gap-[8px]">
+        <div className="mb-2 flex w-full flex-col gap-2">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -74,15 +74,15 @@ export const NeedHelpForm = () => {
             id="email"
             placeholder="Enter Email"
             required
-            className="btn-ui bg-[#FFFFFF] p-[16px]"
+            className="btn-ui border-stroke bg-white p-4"
           />
         </div>
-        <div className="flex flex-col gap-[8px] w-full">
+        <div className="flex w-full flex-col gap-2">
           <label htmlFor="message">Message</label>
           <textarea
             name="message"
             id="message"
-            className="btn-ui h-[152px] resize-none bg-[#FFFFFF] p-[16px]"
+            className="btn-ui border-stroke h-38 resize-none bg-white p-4"
             placeholder="Enter Message"
             required
           ></textarea>
@@ -90,7 +90,7 @@ export const NeedHelpForm = () => {
       </div>
       <button
         type="submit"
-        className="btn-ui h-[56px] w-[121px] bg-[#111111] text-[#FFFFFF]"
+        className="btn-ui hover:bg-text-gray bg-foreground h-14 w-[121px] cursor-pointer text-white"
       >
         Submit
       </button>

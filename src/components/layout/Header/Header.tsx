@@ -6,7 +6,7 @@ import { Container } from "../../Container";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
- 
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("overflow-hidden");
@@ -15,14 +15,14 @@ const Header = () => {
     }
     return () => document.body.classList.remove("overflow-hidden");
   }, [isOpen]);
-  
-   if (!NAV_LINKS || NAV_LINKS.length === 0) {
-     return null;
-   }
+
+  if (!NAV_LINKS || NAV_LINKS.length === 0) {
+    return null;
+  }
   return (
     <header>
       <Container>
-        <div className="relative flex h-[84px] items-center justify-between px-[16px] md:px-0">
+        <div className="relative flex h-21 items-center justify-between px-4 md:px-0">
           <img
             src="./icon.png"
             className="hidden h-6 w-6 sm:block"
@@ -39,18 +39,18 @@ const Header = () => {
               />
             )}
           </button>
-          <nav className="hidden justify-between gap-8 text-base font-normal sm:flex">
+          <nav className="hidden justify-between gap-8 font-normal sm:flex">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="hover:text-gray-500"
+                className="cursor-pointer hover:text-gray-500"
               >
                 {link.name}
               </Link>
             ))}
           </nav>
-          <Link href="#" className="hover:text-gray-500">
+          <Link href="#" className="cursor-pointer hover:text-gray-500">
             <img src="/images/header/bin.png" className="h-6 w-6" alt="Bin" />
           </Link>
           {isOpen && (

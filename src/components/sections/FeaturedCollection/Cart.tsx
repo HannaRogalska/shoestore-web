@@ -26,10 +26,10 @@ export const Cart = () => {
                 width={312}
                 height={312}
                 alt={el.alt}
-                className="mb-[16px] h-auto w-full rounded-xl"
+                className="mb-4 h-auto w-full rounded-xl"
               />
-              <h3 className="text-[16px]">{el.title}</h3>
-              <div className="text-[text-gray]">${el.price.toFixed(2)}</div>
+              <h3>{el.title}</h3>
+              <div className="text-text-gray md:mt-2">${el.price.toFixed(2)}</div>
             </div>
           </CarouselItem>
         ))}

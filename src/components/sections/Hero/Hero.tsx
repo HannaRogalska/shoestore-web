@@ -14,7 +14,7 @@ export const Hero = () => {
   if (!SLIDE_DATA || SLIDE_DATA.length === 0) return null;
 
   return (
-    <div className="relative h-[600px] w-full md:h-[750px]">
+    <div className="relative h-150 w-full md:h-190">
       <div className="relative z-10 h-full">
         <Container>
           <HeroContent />

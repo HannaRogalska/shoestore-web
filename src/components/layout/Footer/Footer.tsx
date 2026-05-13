@@ -9,7 +9,6 @@ import {
 import { FOOTER_DATA } from "./data";
 import { Container } from "../../Container";
 
-
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   if (!FOOTER_DATA || FOOTER_DATA.length === 0) {
@@ -18,15 +17,15 @@ export const Footer = () => {
   return (
     <footer>
       <Container>
-        <div className="flex w-full flex-col px-[16px] pt-[60px] md:px-0">
-          <div className="hidden gap-[24px] md:flex md:flex-row md:justify-between">
+        <div className="flex w-full flex-col px-4 pt-15 md:px-0">
+          <div className="hidden gap-6 md:flex md:flex-row md:justify-between">
             {FOOTER_DATA.map((el) => (
               <div key={el.id}>
-                <h3 className="text-small-size mb-[16px]">{el.title}</h3>
+                <h3 className="mb-4">{el.title}</h3>
                 <div>
                   {el.body.map((elLink) => (
                     <Link
-                      className="text-text-gray mb-[12px] flex flex-col text-[14px] last:mb-0"
+                      className="text-text-gray mb-3 flex flex-col text-sm last:mb-0"
                       href="#"
                       key={elLink.id}
                     >
@@ -37,7 +36,7 @@ export const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="mb-[48px] block w-full md:hidden">
+          <div className="mb-12 block w-full md:hidden">
             <Accordion type="single" className="w-full" collapsible>
               {FOOTER_DATA.map((el) => (
                 <AccordionItem value={el.id} key={el.id}>

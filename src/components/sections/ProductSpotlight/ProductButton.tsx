@@ -7,7 +7,7 @@ export const ProductButton = ({
   selectedSize,
 }: ButtonProps) => {
   return (
-    <div className="mb-[32px] grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-3">
+    <div className="mb-8 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-3">
       {selectedVariant.size.map((el, index) => {
         const isActive = el === selectedSize;
         return (
@@ -15,7 +15,7 @@ export const ProductButton = ({
             type="button"
             onClick={() => onSelectSize(el)}
             key={index}
-            className={`${isActive ? "rounded-[8px] border border-[#111111]" : ""} btn-ui h-[52px] w-full transition-colors hover:border-[#111111]`}
+            className={`${isActive ? "btn-ui border-foreground" : "btn-ui border-stroke"} h-13 w-full cursor-pointer transition-colors`}
           >
             EU {el}
           </button>

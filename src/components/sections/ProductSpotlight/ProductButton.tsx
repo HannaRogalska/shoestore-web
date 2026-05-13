@@ -15,7 +15,7 @@ export const ProductButton = ({
             type="button"
             onClick={() => onSelectSize(el)}
             key={index}
-            className={`${isActive ? "btn-ui border-foreground cursor-pointer" : ""} btn-ui border-stroke h-[52px] w-full cursor-pointer transition-colors hover:border-[#111111]`}
+            className={`${isActive ? "btn-ui border-foreground" : "btn-ui border-stroke"} h-13 w-full cursor-pointer transition-colors`}
           >
             EU {el}
           </button>

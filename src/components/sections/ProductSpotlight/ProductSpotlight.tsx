@@ -106,7 +106,7 @@ const ProductSpotlight = () => {
                 Add To Bag
               </button>
             </div>
-            <p className="text-text-gray) text-sm">
+            <p className="text-text-gray text-sm">
               Let your attitude have the edge in your Nike Air Max Plus, a Tuned
               Air experience that offers premium stability and unbelievable
               cushioning.

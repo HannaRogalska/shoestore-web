@@ -9,15 +9,19 @@ import { Star } from "lucide-react";
 import { Container } from "../../Container";
 
 const ProductSpotlight = () => {
-  if (!PRODUCT_DATA || PRODUCT_DATA.length === 0) return null;
-  const firstVariant = PRODUCT_DATA[0];
+  const firstVariant = PRODUCT_DATA?.[0] ?? null;
 
-  const [selectedVariant, setSelectedVariant] =
-    useState<ProductType>(firstVariant);
-  const [selectedImage, setSelectedImage] = useState<string>(firstVariant.src);
-  const [selectedSize, setSelectedSize] = useState<number>(
-    firstVariant.size[0]
+  const [selectedVariant, setSelectedVariant] = useState<ProductType | null>(
+    firstVariant,
   );
+  const [selectedImage, setSelectedImage] = useState<string>(
+    firstVariant?.src ?? "",
+  );
+  const [selectedSize, setSelectedSize] = useState<number>(
+    firstVariant?.size?.[0] ?? 0,
+  );
+  if (!PRODUCT_DATA || PRODUCT_DATA.length === 0 || !selectedVariant)
+    return null;
 
   const thumbnails = selectedVariant.thumbnails || [];
 

@@ -10,14 +10,13 @@ import { PopupBanner } from "../components/layout/PopupBanner/ PopupBanner";
 export default function Home() {
   return (
     <>
-      
-        <Header />
-        <Hero />
-        <FeaturedCollection />
-        <FAQ />
-        <ProductSpotlight />
-        <NeedHelp />
-        <Footer />
+      <Header />
+      <Hero />
+      <FeaturedCollection />
+      <FAQ />
+      <ProductSpotlight />
+      <NeedHelp />
+      <Footer />
       <PopupBanner />
     </>
   );

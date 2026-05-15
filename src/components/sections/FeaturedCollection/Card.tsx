@@ -29,7 +29,9 @@ export const Card = () => {
                 className="mb-4 h-auto w-full rounded-xl"
               />
               <h3>{el.title}</h3>
-              <div className="text-text-gray md:mt-2">${el.price.toFixed(2)}</div>
+              <div className="text-text-gray md:mt-2">
+                ${el.price.toFixed(2)}
+              </div>
             </div>
           </CarouselItem>
         ))}

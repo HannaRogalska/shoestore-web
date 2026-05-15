@@ -3,7 +3,7 @@ import { ProductType } from "./types";
 export const PRODUCT_DATA: ProductType[] = [
   {
     id: "1",
-    title: "Nike Air Max Plus",
+    title: "Nike Air Max Plus pink color",
     color: "Pink",
     price: 280,
     src: "/images/productSpotlight/pink/pink-shoe-1.jpg",
@@ -18,7 +18,7 @@ export const PRODUCT_DATA: ProductType[] = [
   },
   {
     id: "2",
-    title: "Nike Air Max Plus",
+    title: "Nike Air Max Plus black color",
     color: "Black",
     price: 280,
     src: "/images/productSpotlight/black/black-shoe-1.jpg",
@@ -33,7 +33,7 @@ export const PRODUCT_DATA: ProductType[] = [
   },
   {
     id: "3",
-    title: "Nike Air Max Plus",
+    title: "Nike Air Max Plus white color",
     color: "White",
     price: 280,
     src: "/images/productSpotlight/white/white-shoe-1.jpg",

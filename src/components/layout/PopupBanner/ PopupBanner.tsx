@@ -11,6 +11,15 @@ export const PopupBanner = () => {
         }, 1000)
         return () => clearTimeout(timer);
     }, [])
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [isOpen]);
+
     if (!isOpen) return null;
     return (
       <>
@@ -18,8 +27,8 @@ export const PopupBanner = () => {
           className="fixed inset-0 z-40 bg-black/70"
           onClick={() => setIsOpen(false)}
         ></div>
-        <div className="fixed top-1/2 left-1/2 z-50 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[8px] border bg-[#FFFFFF] md:h-[536px] md:w-[872px]">
-          <div className="relative w-[359px] px-6 py-15 md:w-[519px] md:p-15">
+        <div className="fixed top-1/2 left-1/2 z-50 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center md:h-134 md:w-218">
+          <div className="relative w-[359px] rounded-[8px] bg-white px-6 py-15 md:w-[519px] md:rounded-r-none md:p-15">
             <h2 className="mb-4 text-3xl font-bold uppercase md:text-5xl">
               Here’s $10 Off Your First Order!
             </h2>
@@ -35,27 +44,27 @@ export const PopupBanner = () => {
                 type="email"
                 id="email"
                 placeholder="Enter Email"
-                className="btn-ui mb-[16px] h-[56px] w-[311px] p-[16px] md:w-[399px]"
+                className="border-stroke mb-4 h-14 w-[311px] rounded-[8px] border p-4 md:w-[399px]"
               />
               <button
                 type="button"
-                className="h-[56px] w-[311px] rounded-[8px] bg-[#111111] text-[#FFFFFF] md:w-[399px]"
+                className="bg-foreground hover:bg-text-gray h-14 w-[311px] cursor-pointer rounded-[8px] text-white md:w-[399px]"
               >
                 Send
               </button>
               <button
-                className="absolute top-[16px] right-[16px] md:hidden"
+                className="absolute top-4 right-4 md:hidden"
                 onClick={() => setIsOpen(false)}
               >
                 <X
-                  className="rounded-[50px] border bg-[#FFFFFF]"
+                  className="border-stroke rounded-[50px] border bg-white"
                   strokeWidth={0.5}
                 />
               </button>
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="relative h-[535px] w-[352px] shrink">
+            <div className="relative h-[535px] w-88 shrink">
               <Image
                 src="/images/popupBanner/nike-just-do-it.jpg"
                 className="rounded-r-[8px] object-cover"
@@ -64,10 +73,10 @@ export const PopupBanner = () => {
                 alt="Popup banner"
               />
               <button
-                className="absolute top-[16px] right-[16px]"
+                className="absolute top-4 right-4"
                 onClick={() => setIsOpen(false)}
               >
-                <X className="rounded-[50px] bg-[#FFFFFF]" strokeWidth={0.5} />
+                <X className="rounded-[50px] bg-white" strokeWidth={0.5} />
               </button>
             </div>
           </div>

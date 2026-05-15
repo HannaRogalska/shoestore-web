@@ -1,5 +1,5 @@
 import { Container } from "../../Container";
-import { Cart } from "./Card";
+import { Card } from "./Card";
 
 
 export const FeaturedCollection = () => {
@@ -10,7 +10,7 @@ export const FeaturedCollection = () => {
           <h2 className="mb-10 text-center text-2xl md:text-3xl">
             Featured Collection
           </h2>
-          <Cart />
+          <Card />
         </div>
       </Container>
     </section>

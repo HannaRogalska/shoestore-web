@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { SHOES_DATA } from "./data";
 
-export const Cart = () => {
+export const Card = () => {
   if (!SHOES_DATA || SHOES_DATA.length === 0) {
     return null;
   }

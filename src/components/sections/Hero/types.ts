@@ -1,5 +1,5 @@
 export interface Slide {
-  id: number;
+  id: string;
   alt: string;
   src: string;
 }

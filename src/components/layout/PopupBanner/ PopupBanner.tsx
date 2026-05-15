@@ -23,7 +23,7 @@ export const PopupBanner = () => {
             <h2 className="mb-4 text-3xl font-bold uppercase md:text-5xl">
               Here’s $10 Off Your First Order!
             </h2>
-            <p className="mb-12 ">
+            <p className="mb-12">
               Join our newsletter and get a $10 discount code sent straight to
               your inbox. New customers only.
             </p>
@@ -57,7 +57,7 @@ export const PopupBanner = () => {
           <div className="hidden md:block">
             <div className="relative h-[535px] w-[352px] shrink">
               <Image
-                src="/images/popupBanner/popupImg.png"
+                src="/images/popupBanner/nike-just-do-it.jpg"
                 className="rounded-r-[8px] object-cover"
                 fill
                 sizes="352"

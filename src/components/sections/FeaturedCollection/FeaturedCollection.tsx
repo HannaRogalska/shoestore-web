@@ -1,5 +1,5 @@
 import { Container } from "../../Container";
-import { Cart } from "./Cart";
+import { Cart } from "./Card";
 
 
 export const FeaturedCollection = () => {

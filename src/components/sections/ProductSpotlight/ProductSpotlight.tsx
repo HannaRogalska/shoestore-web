@@ -9,11 +9,21 @@ import { Star } from "lucide-react";
 import { Container } from "../../Container";
 
 const ProductSpotlight = () => {
-  const [selectedVariant, setSelectedVariant] = useState(PRODUCT_DATA[0]);
-  const [selectedImage, setSelectedImage] = useState(PRODUCT_DATA[0].src);
-  const [selectedSize, setSelectedSize] = useState(PRODUCT_DATA[0].size[0]);
+  const firstVariant = PRODUCT_DATA?.[0] ?? null;
 
-  const thumbnails = selectedVariant.thumbnails;
+  const [selectedVariant, setSelectedVariant] = useState<ProductType | null>(
+    firstVariant,
+  );
+  const [selectedImage, setSelectedImage] = useState<string>(
+    firstVariant?.src ?? "",
+  );
+  const [selectedSize, setSelectedSize] = useState<number>(
+    firstVariant?.size?.[0] ?? 0,
+  );
+  if (!PRODUCT_DATA || PRODUCT_DATA.length === 0 || !selectedVariant)
+    return null;
+
+  const thumbnails = selectedVariant.thumbnails || [];
 
   const handleShoes = (el: ProductType) => {
     setSelectedVariant(el);
@@ -28,9 +38,6 @@ const ProductSpotlight = () => {
   const onSelectSize = (el: number) => {
     setSelectedSize(el);
   };
-  if (!PRODUCT_DATA || PRODUCT_DATA.length === 0) {
-    return null;
-  }
 
   return (
     <section>
@@ -101,7 +108,7 @@ const ProductSpotlight = () => {
             <div>
               <button
                 type="button"
-                className="btn-ui bg-foreground cursor-pointer hover:bg-text-gray mb-8 h-14 w-full text-white"
+                className="btn-ui bg-foreground hover:bg-text-gray mb-8 h-14 w-full cursor-pointer text-white"
               >
                 Add To Bag
               </button>

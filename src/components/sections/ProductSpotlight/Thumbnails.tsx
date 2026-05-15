@@ -3,7 +3,11 @@
 import Image from "next/image";
 import { ThumbnailsProps } from "./types";
 
-export const Thumbnails = ({ data, onSelect, selectedImage }: ThumbnailsProps) => {
+export const Thumbnails = ({
+  data,
+  onSelect,
+  selectedImage,
+}: ThumbnailsProps) => {
   return (
     <div className="scrollbar-hide grid w-full grid-flow-col gap-[15px] overflow-x-auto md:w-22 md:grid-flow-row md:grid-cols-1">
       {data.map((el, index) => {

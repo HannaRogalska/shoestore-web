@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { SHOES_DATA } from "./data";
 
-export const Cart = () => {
+export const Card = () => {
   if (!SHOES_DATA || SHOES_DATA.length === 0) {
     return null;
   }
@@ -29,7 +29,9 @@ export const Cart = () => {
                 className="mb-4 h-auto w-full rounded-xl"
               />
               <h3>{el.title}</h3>
-              <div className="text-text-gray md:mt-2">${el.price.toFixed(2)}</div>
+              <div className="text-text-gray md:mt-2">
+                ${el.price.toFixed(2)}
+              </div>
             </div>
           </CarouselItem>
         ))}

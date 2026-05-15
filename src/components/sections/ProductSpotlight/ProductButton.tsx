@@ -1,6 +1,5 @@
 import { ButtonProps } from "./types";
 
-
 export const ProductButton = ({
   selectedVariant,
   onSelectSize,
@@ -24,5 +23,3 @@ export const ProductButton = ({
     </div>
   );
 };
-
-
